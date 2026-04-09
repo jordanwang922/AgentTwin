@@ -1,0 +1,24 @@
+{
+  "tenant": {
+    "id": "tenant-demo",
+    "name": "AgentTwin Demo Tenant",
+    "brandName": "AgentTwin老师",
+    "replyStyle": "共情 -> 判断 -> 2到3条建议 -> 收尾"
+  },
+  "channel": {
+    "id": "channel-demo",
+    "tenantId": "tenant-demo",
+    "type": "wecom",
+    "name": "WeCom Demo Channel"
+  },
+  "groups": [
+    {
+      "id": "group-demo",
+      "groupId": "group-demo",
+      "name": "家长群演示组",
+      "autoReplyEnabled": true,
+      "triggerMode": "mention_only",
+      "botName": "AgentTwin老师"
+    }
+  ]
+}

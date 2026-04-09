@@ -1,0 +1,17 @@
+{
+  "profiles": {
+    "user-demo": {
+      "learnerId": "user-demo",
+      "completedLessons": [],
+      "nextRecommendedLesson": "lesson-01",
+      "conversationCount": 86,
+      "segment": "needs_follow_up",
+      "tags": [
+        "needs_follow_up",
+        "engaged"
+      ],
+      "updatedAt": "2026-04-09T09:54:23.256Z",
+      "lastInteractionAt": "2026-04-09T13:43:58.831Z"
+    }
+  }
+}

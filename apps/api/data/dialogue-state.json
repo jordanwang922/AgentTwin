@@ -1,0 +1,21 @@
+{
+  "sessions": {
+    "student:user-demo:group-demo": [
+      {
+        "role": "assistant",
+        "message": "成长顾问小A：目前的演示排课是每周 2 次，每次 60 分钟，工作日晚上和周末都可以按家庭作息做微调。",
+        "createdAt": "2026-04-09T13:43:58.825Z"
+      },
+      {
+        "role": "user",
+        "message": "怎么测试自定义仓储？",
+        "createdAt": "2026-04-09T13:43:58.831Z"
+      },
+      {
+        "role": "assistant",
+        "message": "顾问Bot：先写失败测试，再接统一 repository。",
+        "createdAt": "2026-04-09T13:43:58.833Z"
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "dist",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "paths": {
+      "@agenttwin/core": [
+        "../../packages/core/src"
+      ],
+      "@agenttwin/shared": [
+        "../../packages/shared/src"
+      ],
+      "@agenttwin/wecom": [
+        "../../packages/wecom/src"
+      ],
+      "@agenttwin/rag": [
+        "../../packages/rag/src"
+      ],
+      "@agenttwin/llm": [
+        "../../packages/llm/src"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "test/**/*.ts"
+  ]
+}

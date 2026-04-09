@@ -1,0 +1,78 @@
+{
+  "faq": [
+    {
+      "id": "faq-schedule",
+      "question": "上课时间怎么安排？",
+      "aliases": [
+        "课程时间怎么安排",
+        "每周什么时候上课",
+        "上课时间安排"
+      ],
+      "answer": "目前的演示排课是每周 2 次，每次 60 分钟，工作日晚上和周末都可以按家庭作息做微调。",
+      "citation": "faq://schedule"
+    },
+    {
+      "id": "faq-trial",
+      "question": "可以先试听吗？",
+      "aliases": [
+        "有没有试听课",
+        "能不能先试课"
+      ],
+      "answer": "可以，首轮沟通后会安排一次体验课，用来观察孩子状态和家长陪伴节奏。",
+      "citation": "faq://trial"
+    }
+  ],
+  "articles": [
+    {
+      "id": "doc-homework-coaching",
+      "title": "家庭作业陪伴步骤",
+      "summary": "适合家长群常见的作业拖拉、分心、启动困难问题。",
+      "content": "建议先把作业拆成 10 到 15 分钟的小段，每段只有一个清晰目标。开始前先确认孩子知道第一步做什么，中途只提醒当前步骤，不连带批评。完成一个小段后立刻给出短反馈，再进入下一段。",
+      "keywords": [
+        "写作业",
+        "拖拉",
+        "分心",
+        "陪伴",
+        "步骤",
+        "启动"
+      ],
+      "citation": "doc://homework-coaching"
+    },
+    {
+      "id": "doc-emotion-guidance",
+      "title": "情绪波动时的家长回应框架",
+      "summary": "先接住情绪，再进入方法建议。",
+      "content": "孩子情绪波动时，建议先描述观察到的状态，再确认他的真实感受，最后只给一到两个可执行动作，不要连续追问。",
+      "keywords": [
+        "情绪",
+        "崩溃",
+        "回应",
+        "安抚",
+        "感受"
+      ],
+      "citation": "doc://emotion-guidance"
+    }
+  ],
+  "riskRules": [
+    {
+      "id": "risk-self-harm",
+      "keywords": [
+        "自杀",
+        "自残",
+        "不想活"
+      ],
+      "flag": "sensitive:self_harm",
+      "replyText": "这类问题不建议在群内由 AI 直接判断。请立刻转人工，并优先联系当地专业心理或医疗支持。"
+    },
+    {
+      "id": "risk-refund",
+      "keywords": [
+        "退款",
+        "退费",
+        "赔偿"
+      ],
+      "flag": "sensitive:refund",
+      "replyText": "涉及退费、合同或承诺的问题，请转人工按标准流程回复，避免在群内自由发挥。"
+    }
+  ]
+}

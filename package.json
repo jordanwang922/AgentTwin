@@ -1,0 +1,22 @@
+{
+  "name": "agenttwin",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*",
+    "workers/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace @agenttwin/core && npm run build --workspace @agenttwin/shared && npm run build --workspace @agenttwin/rag && npm run build --workspace @agenttwin/llm && npm run build --workspace @agenttwin/wecom && npm run build --workspace @agenttwin/api && npm run build --workspace @agenttwin/admin && npm run build --workspace @agenttwin/worker",
+    "test": "npm run test -ws --if-present",
+    "dev:api": "npm run start:dev --workspace @agenttwin/api",
+    "dev:admin": "npm run dev --workspace @agenttwin/admin",
+    "dev:worker": "npm run dev --workspace @agenttwin/worker",
+    "log:rotate": "node infra/scripts/rotate-dev-log.mjs",
+    "db:bootstrap": "node infra/scripts/bootstrap-postgres.mjs"
+  },
+  "dependencies": {
+    "pg": "^8.16.3"
+  }
+}

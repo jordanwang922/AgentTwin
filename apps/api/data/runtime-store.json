@@ -1,0 +1,438 @@
+{
+  "messages": [
+    {
+      "traceId": "trace_1775722146830_hmkynj",
+      "tenantId": "tenant-demo",
+      "groupId": "group-demo",
+      "userId": "user-demo",
+      "normalizedText": "孩子写作业拖拉，总是分心，有什么陪伴步骤？",
+      "replyText": "适合家长群常见的作业拖拉、分心、启动困难问题。建议先把作业拆成 10 到 15 分钟的小段，每段只有一个清晰目标。开始前先确认孩子知道第一步做什么，中途只提醒当前步骤，不连带批评。完成一个小段后立刻给出短反馈，再进入下一段。",
+      "replyMode": "rag",
+      "confidence": 0.76,
+      "citations": [
+        "doc://homework-coaching"
+      ],
+      "riskFlags": [],
+      "createdAt": "2026-04-09T08:09:06.830Z"
+    },
+    {
+      "traceId": "trace_1775722146829_zxyb8t",
+      "tenantId": "tenant-demo",
+      "groupId": "group-demo",
+      "userId": "user-demo",
+      "normalizedText": "孩子有自杀倾向怎么办？",
+      "replyText": "这类问题不建议在群内由 AI 直接判断。请立刻转人工，并优先联系当地专业心理或医疗支持。",
+      "replyMode": "manual_block",
+      "confidence": 0.98,
+      "citations": [],
+      "riskFlags": [
+        "sensitive:self_harm"
+      ],
+      "createdAt": "2026-04-09T08:09:06.829Z"
+    },
+    {
+      "traceId": "trace_1775722146828_uasm24",
+      "tenantId": "tenant-demo",
+      "groupId": "group-demo",
+      "userId": "user-demo",
+      "normalizedText": "上课时间怎么安排？",
+      "replyText": "目前的演示排课是每周 2 次，每次 60 分钟，工作日晚上和周末都可以按家庭作息做微调。",
+      "replyMode": "faq",
+      "confidence": 0.92,
+      "citations": [
+        "faq://schedule"
+      ],
+      "riskFlags": [],
+      "createdAt": "2026-04-09T08:09:06.828Z"
+    },
+    {
+      "traceId": "trace_1775722146827_0vivfu",
+      "tenantId": "tenant-demo",
+      "groupId": "group-demo",
+      "userId": "user-demo",
+      "normalizedText": "孩子不愿意写作业怎么办？",
+      "replyText": "AgentTwin MVP 回复：已收到你的问题“孩子不愿意写作业怎么办？”，当前为演示回复，后续会接入 FAQ、RAG 和真实模型能力。",
+      "replyMode": "ai",
+      "confidence": 0.42,
+      "citations": [],
+      "riskFlags": [],
+      "createdAt": "2026-04-09T08:09:06.827Z"
+    },
+    {
+      "traceId": "trace_1775722097876_lecdrw",
+      "tenantId": "tenant-demo",
+      "groupId": "group-demo",
+      "userId": "user-demo",
+      "normalizedText": "孩子写作业拖拉，总是分心，有什么陪伴步骤？",
+      "replyText": "适合家长群常见的作业拖拉、分心、启动困难问题。建议先把作业拆成 10 到 15 分钟的小段，每段只有一个清晰目标。开始前先确认孩子知道第一步做什么，中途只提醒当前步骤，不连带批评。完成一个小段后立刻给出短反馈，再进入下一段。",
+      "replyMode": "rag",
+      "confidence": 0.76,
+      "citations": [
+        "doc://homework-coaching"
+      ],
+      "riskFlags": [],
+      "createdAt": "2026-04-09T08:08:17.876Z"
+    },
+    {
+      "traceId": "trace_1775722097876_7qo1y5",
+      "tenantId": "tenant-demo",
+      "groupId": "group-demo",
+      "userId": "user-demo",
+      "normalizedText": "孩子有自杀倾向怎么办？",
+      "replyText": "这类问题不建议在群内由 AI 直接判断。请立刻转人工，并优先联系当地专业心理或医疗支持。",
+      "replyMode": "manual_block",
+      "confidence": 0.98,
+      "citations": [],
+      "riskFlags": [
+        "sensitive:self_harm"
+      ],
+      "createdAt": "2026-04-09T08:08:17.876Z"
+    },
+    {
+      "traceId": "trace_1775722097875_3wisqn",
+      "tenantId": "tenant-demo",
+      "groupId": "group-demo",
+      "userId": "user-demo",
+      "normalizedText": "上课时间怎么安排？",
+      "replyText": "目前的演示排课是每周 2 次，每次 60 分钟，工作日晚上和周末都可以按家庭作息做微调。",
+      "replyMode": "faq",
+      "confidence": 0.92,
+      "citations": [
+        "faq://schedule"
+      ],
+      "riskFlags": [],
+      "createdAt": "2026-04-09T08:08:17.875Z"
+    },
+    {
+      "traceId": "trace_1775722097874_4uic07",
+      "tenantId": "tenant-demo",
+      "groupId": "group-demo",
+      "userId": "user-demo",
+      "normalizedText": "孩子不愿意写作业怎么办？",
+      "replyText": "AgentTwin MVP 回复：已收到你的问题“孩子不愿意写作业怎么办？”，当前为演示回复，后续会接入 FAQ、RAG 和真实模型能力。",
+      "replyMode": "ai",
+      "confidence": 0.42,
+      "citations": [],
+      "riskFlags": [],
+      "createdAt": "2026-04-09T08:08:17.874Z"
+    },
+    {
+      "traceId": "trace_1775722054219_5ps4p1",
+      "tenantId": "tenant-demo",
+      "groupId": "group-demo",
+      "userId": "user-demo",
+      "normalizedText": "孩子写作业拖拉，总是分心，有什么陪伴步骤？",
+      "replyText": "适合家长群常见的作业拖拉、分心、启动困难问题。建议先把作业拆成 10 到 15 分钟的小段，每段只有一个清晰目标。开始前先确认孩子知道第一步做什么，中途只提醒当前步骤，不连带批评。完成一个小段后立刻给出短反馈，再进入下一段。",
+      "replyMode": "rag",
+      "confidence": 0.76,
+      "citations": [
+        "doc://homework-coaching"
+      ],
+      "riskFlags": [],
+      "createdAt": "2026-04-09T08:07:34.219Z"
+    },
+    {
+      "traceId": "trace_1775722054218_vdfmh6",
+      "tenantId": "tenant-demo",
+      "groupId": "group-demo",
+      "userId": "user-demo",
+      "normalizedText": "孩子有自杀倾向怎么办？",
+      "replyText": "这类问题不建议在群内由 AI 直接判断。请立刻转人工，并优先联系当地专业心理或医疗支持。",
+      "replyMode": "manual_block",
+      "confidence": 0.98,
+      "citations": [],
+      "riskFlags": [
+        "sensitive:self_harm"
+      ],
+      "createdAt": "2026-04-09T08:07:34.218Z"
+    },
+    {
+      "traceId": "trace_1775722054218_j9d57r",
+      "tenantId": "tenant-demo",
+      "groupId": "group-demo",
+      "userId": "user-demo",
+      "normalizedText": "上课时间怎么安排？",
+      "replyText": "目前的演示排课是每周 2 次，每次 60 分钟，工作日晚上和周末都可以按家庭作息做微调。",
+      "replyMode": "faq",
+      "confidence": 0.92,
+      "citations": [
+        "faq://schedule"
+      ],
+      "riskFlags": [],
+      "createdAt": "2026-04-09T08:07:34.218Z"
+    },
+    {
+      "traceId": "trace_1775722054217_l5x7qs",
+      "tenantId": "tenant-demo",
+      "groupId": "group-demo",
+      "userId": "user-demo",
+      "normalizedText": "孩子不愿意写作业怎么办？",
+      "replyText": "AgentTwin MVP 回复：已收到你的问题“孩子不愿意写作业怎么办？”，当前为演示回复，后续会接入 FAQ、RAG 和真实模型能力。",
+      "replyMode": "ai",
+      "confidence": 0.42,
+      "citations": [],
+      "riskFlags": [],
+      "createdAt": "2026-04-09T08:07:34.217Z"
+    },
+    {
+      "traceId": "trace_1775721942874_zqa7k7",
+      "tenantId": "tenant-demo",
+      "groupId": "group-demo",
+      "userId": "user-demo",
+      "normalizedText": "孩子写作业拖拉，总是分心，有什么陪伴步骤？",
+      "replyText": "适合家长群常见的作业拖拉、分心、启动困难问题。建议先把作业拆成 10 到 15 分钟的小段，每段只有一个清晰目标。开始前先确认孩子知道第一步做什么，中途只提醒当前步骤，不连带批评。完成一个小段后立刻给出短反馈，再进入下一段。",
+      "replyMode": "rag",
+      "confidence": 0.76,
+      "citations": [
+        "doc://homework-coaching"
+      ],
+      "riskFlags": [],
+      "createdAt": "2026-04-09T08:05:42.874Z"
+    },
+    {
+      "traceId": "trace_1775721942873_zcta6z",
+      "tenantId": "tenant-demo",
+      "groupId": "group-demo",
+      "userId": "user-demo",
+      "normalizedText": "孩子有自杀倾向怎么办？",
+      "replyText": "这类问题不建议在群内由 AI 直接判断。请立刻转人工，并优先联系当地专业心理或医疗支持。",
+      "replyMode": "manual_block",
+      "confidence": 0.98,
+      "citations": [],
+      "riskFlags": [
+        "sensitive:self_harm"
+      ],
+      "createdAt": "2026-04-09T08:05:42.873Z"
+    },
+    {
+      "traceId": "trace_1775721942873_u9mxsu",
+      "tenantId": "tenant-demo",
+      "groupId": "group-demo",
+      "userId": "user-demo",
+      "normalizedText": "上课时间怎么安排？",
+      "replyText": "目前的演示排课是每周 2 次，每次 60 分钟，工作日晚上和周末都可以按家庭作息做微调。",
+      "replyMode": "faq",
+      "confidence": 0.92,
+      "citations": [
+        "faq://schedule"
+      ],
+      "riskFlags": [],
+      "createdAt": "2026-04-09T08:05:42.873Z"
+    },
+    {
+      "traceId": "trace_1775721942871_9gilqb",
+      "tenantId": "tenant-demo",
+      "groupId": "group-demo",
+      "userId": "user-demo",
+      "normalizedText": "孩子不愿意写作业怎么办？",
+      "replyText": "AgentTwin MVP 回复：已收到你的问题“孩子不愿意写作业怎么办？”，当前为演示回复，后续会接入 FAQ、RAG 和真实模型能力。",
+      "replyMode": "ai",
+      "confidence": 0.42,
+      "citations": [],
+      "riskFlags": [],
+      "createdAt": "2026-04-09T08:05:42.872Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "traceId": "trace_1775722146830_hmkynj",
+      "tenantId": "tenant-demo",
+      "eventType": "chat.reply.generated",
+      "payload": {
+        "replyMode": "rag",
+        "citations": [
+          "doc://homework-coaching"
+        ],
+        "riskFlags": []
+      },
+      "createdAt": "2026-04-09T08:09:06.830Z"
+    },
+    {
+      "traceId": "trace_1775722146829_zxyb8t",
+      "tenantId": "tenant-demo",
+      "eventType": "chat.reply.generated",
+      "payload": {
+        "replyMode": "manual_block",
+        "citations": [],
+        "riskFlags": [
+          "sensitive:self_harm"
+        ]
+      },
+      "createdAt": "2026-04-09T08:09:06.829Z"
+    },
+    {
+      "traceId": "trace_1775722146828_uasm24",
+      "tenantId": "tenant-demo",
+      "eventType": "chat.reply.generated",
+      "payload": {
+        "replyMode": "faq",
+        "citations": [
+          "faq://schedule"
+        ],
+        "riskFlags": []
+      },
+      "createdAt": "2026-04-09T08:09:06.828Z"
+    },
+    {
+      "traceId": "trace_1775722146827_0vivfu",
+      "tenantId": "tenant-demo",
+      "eventType": "chat.reply.generated",
+      "payload": {
+        "replyMode": "ai",
+        "citations": [],
+        "riskFlags": []
+      },
+      "createdAt": "2026-04-09T08:09:06.827Z"
+    },
+    {
+      "traceId": "trace_1775722097876_lecdrw",
+      "tenantId": "tenant-demo",
+      "eventType": "chat.reply.generated",
+      "payload": {
+        "replyMode": "rag",
+        "citations": [
+          "doc://homework-coaching"
+        ],
+        "riskFlags": []
+      },
+      "createdAt": "2026-04-09T08:08:17.876Z"
+    },
+    {
+      "traceId": "trace_1775722097876_7qo1y5",
+      "tenantId": "tenant-demo",
+      "eventType": "chat.reply.generated",
+      "payload": {
+        "replyMode": "manual_block",
+        "citations": [],
+        "riskFlags": [
+          "sensitive:self_harm"
+        ]
+      },
+      "createdAt": "2026-04-09T08:08:17.876Z"
+    },
+    {
+      "traceId": "trace_1775722097875_3wisqn",
+      "tenantId": "tenant-demo",
+      "eventType": "chat.reply.generated",
+      "payload": {
+        "replyMode": "faq",
+        "citations": [
+          "faq://schedule"
+        ],
+        "riskFlags": []
+      },
+      "createdAt": "2026-04-09T08:08:17.875Z"
+    },
+    {
+      "traceId": "trace_1775722097874_4uic07",
+      "tenantId": "tenant-demo",
+      "eventType": "chat.reply.generated",
+      "payload": {
+        "replyMode": "ai",
+        "citations": [],
+        "riskFlags": []
+      },
+      "createdAt": "2026-04-09T08:08:17.874Z"
+    },
+    {
+      "traceId": "trace_1775722054219_5ps4p1",
+      "tenantId": "tenant-demo",
+      "eventType": "chat.reply.generated",
+      "payload": {
+        "replyMode": "rag",
+        "citations": [
+          "doc://homework-coaching"
+        ],
+        "riskFlags": []
+      },
+      "createdAt": "2026-04-09T08:07:34.219Z"
+    },
+    {
+      "traceId": "trace_1775722054218_vdfmh6",
+      "tenantId": "tenant-demo",
+      "eventType": "chat.reply.generated",
+      "payload": {
+        "replyMode": "manual_block",
+        "citations": [],
+        "riskFlags": [
+          "sensitive:self_harm"
+        ]
+      },
+      "createdAt": "2026-04-09T08:07:34.218Z"
+    },
+    {
+      "traceId": "trace_1775722054218_j9d57r",
+      "tenantId": "tenant-demo",
+      "eventType": "chat.reply.generated",
+      "payload": {
+        "replyMode": "faq",
+        "citations": [
+          "faq://schedule"
+        ],
+        "riskFlags": []
+      },
+      "createdAt": "2026-04-09T08:07:34.218Z"
+    },
+    {
+      "traceId": "trace_1775722054217_l5x7qs",
+      "tenantId": "tenant-demo",
+      "eventType": "chat.reply.generated",
+      "payload": {
+        "replyMode": "ai",
+        "citations": [],
+        "riskFlags": []
+      },
+      "createdAt": "2026-04-09T08:07:34.217Z"
+    },
+    {
+      "traceId": "trace_1775721942874_zqa7k7",
+      "tenantId": "tenant-demo",
+      "eventType": "chat.reply.generated",
+      "payload": {
+        "replyMode": "rag",
+        "citations": [
+          "doc://homework-coaching"
+        ],
+        "riskFlags": []
+      },
+      "createdAt": "2026-04-09T08:05:42.874Z"
+    },
+    {
+      "traceId": "trace_1775721942873_zcta6z",
+      "tenantId": "tenant-demo",
+      "eventType": "chat.reply.generated",
+      "payload": {
+        "replyMode": "manual_block",
+        "citations": [],
+        "riskFlags": [
+          "sensitive:self_harm"
+        ]
+      },
+      "createdAt": "2026-04-09T08:05:42.873Z"
+    },
+    {
+      "traceId": "trace_1775721942873_u9mxsu",
+      "tenantId": "tenant-demo",
+      "eventType": "chat.reply.generated",
+      "payload": {
+        "replyMode": "faq",
+        "citations": [
+          "faq://schedule"
+        ],
+        "riskFlags": []
+      },
+      "createdAt": "2026-04-09T08:05:42.873Z"
+    },
+    {
+      "traceId": "trace_1775721942871_9gilqb",
+      "tenantId": "tenant-demo",
+      "eventType": "chat.reply.generated",
+      "payload": {
+        "replyMode": "ai",
+        "citations": [],
+        "riskFlags": []
+      },
+      "createdAt": "2026-04-09T08:05:42.872Z"
+    }
+  ]
+}
