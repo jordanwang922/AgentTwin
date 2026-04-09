@@ -5,8 +5,8 @@ import {
   encryptWecomReply,
   isWecomTextMessage,
   normalizeWecomMessage,
+  resolveWecomUrlVerification,
   resolveWecomCallbackPayload,
-  verifyWecomSignature,
   verifyWecomUrl
 } from "@agenttwin/wecom";
 import { ChatService } from "./chat.service";
@@ -21,18 +21,12 @@ export class WecomController {
 
   @Get()
   verify(@Query() query: Record<string, string | undefined>) {
-    const token = process.env.WECOM_TOKEN;
-
-    if (token && query.msg_signature && query.timestamp && query.nonce) {
-      const isValid = verifyWecomSignature(token, query.timestamp, query.nonce, query.msg_signature);
-
-      return {
-        ...verifyWecomUrl(query),
-        verified: isValid
-      };
-    }
-
-    return verifyWecomUrl(query);
+    return resolveWecomUrlVerification({
+      ...verifyWecomUrl(query),
+      token: process.env.WECOM_TOKEN,
+      encodingAesKey: process.env.WECOM_AES_KEY,
+      receiveId: process.env.WECOM_CORP_ID
+    });
   }
 
   @Post()

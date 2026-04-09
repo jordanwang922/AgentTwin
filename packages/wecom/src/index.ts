@@ -10,6 +10,16 @@ export interface WecomVerificationResult {
   nonce?: string;
 }
 
+export interface WecomUrlVerificationInput {
+  echostr?: string;
+  msgSignature?: string;
+  timestamp?: string;
+  nonce?: string;
+  token?: string;
+  encodingAesKey?: string;
+  receiveId?: string;
+}
+
 export interface WecomCallbackPayload {
   ToUserName?: string;
   FromUserName?: string;
@@ -69,6 +79,32 @@ export function verifyWecomUrl(query: Record<string, string | undefined>): Wecom
     timestamp: query.timestamp,
     nonce: query.nonce
   };
+}
+
+export function resolveWecomUrlVerification(input: WecomUrlVerificationInput): string {
+  const echostr = input.echostr ?? "agenttwin-wecom-ok";
+
+  if (
+    input.echostr &&
+    input.msgSignature &&
+    input.timestamp &&
+    input.nonce &&
+    input.token &&
+    input.encodingAesKey &&
+    input.receiveId
+  ) {
+    return decryptWecomMessage({
+      token: input.token,
+      encodingAesKey: input.encodingAesKey,
+      receiveId: input.receiveId,
+      msgSignature: input.msgSignature,
+      timestamp: input.timestamp,
+      nonce: input.nonce,
+      encrypted: input.echostr
+    });
+  }
+
+  return echostr;
 }
 
 export function verifyWecomSignature(
