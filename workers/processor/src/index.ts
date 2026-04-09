@@ -1,4 +1,6 @@
-import { createTraceId } from "@agenttwin/shared";
+import { createTraceId, loadEnvFile } from "@agenttwin/shared";
+
+loadEnvFile(process.cwd());
 
 const apiBaseUrl = process.env.AGENTTWIN_API_BASE_URL ?? "http://127.0.0.1:3100";
 const pollIntervalMs = Number(process.env.AGENTTWIN_SOP_POLL_INTERVAL_MS ?? 30000);

@@ -17,6 +17,7 @@
     "db:bootstrap": "node infra/scripts/bootstrap-postgres.mjs"
   },
   "dependencies": {
+    "dotenv": "^17.4.1",
     "pg": "^8.16.3"
   }
 }

@@ -1,9 +1,11 @@
 import "reflect-metadata";
 import express from "express";
 import { NestFactory } from "@nestjs/core";
+import { loadEnvFile } from "@agenttwin/shared";
 import { AppModule } from "./app.module";
 
 async function bootstrap() {
+  loadEnvFile(process.cwd());
   const app = await NestFactory.create(AppModule);
   const port = Number(process.env.PORT ?? 3100);
 
