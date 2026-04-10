@@ -193,3 +193,18 @@
 - Closed two remaining phase-level gaps by adding teacher-side SOP edit flows for templates and tasks, and by extending student-mode chat with a first-pass practice-feedback guidance path that uses recent dialogue context plus the next-step recommendation.
 - Updated the admin surface so teacher operators can put an existing template or task back into the form and save changes without leaving the module.
 - Re-ran verification with `npm run test --workspace @agenttwin/api`, `npm run test`, `npm run build`, and `npm run log:rotate`; the suite now passes with 45 API tests and the active development log remains below the archive threshold at 190 lines.
+
+### 2026-04-10 00:18 CST
+
+- Completed real WeCom deployment verification on `https://wecom.51winwin.com`, including HTTPS reachability, callback URL verification, and production `.env` loading on the Aliyun Ubuntu server.
+- Fixed two real-integration defects discovered during deployment: `GET /wecom/callback` now returns the raw or decrypted `echostr` required by WeCom URL verification, and API/worker startup now auto-load the module root `.env` file.
+- Pushed the deployment fixes to the standalone AgentTwin repository at `https://github.com/jordanwang922/AgentTwin.git` under commits `197a70d` and `7c7b0b4`.
+- Verified that the official WeCom self-built app path works for app one-to-one chat: real mobile-side messages now reach AgentTwin, mention-triggered replies work, sensitive-risk interception works, and practice-feedback / next-step suggestions work.
+- Verified that the current official self-built app path does **not** make external customer-group `@AgentTwin老师` messages arrive at the backend. Group toolbar entry injection works, but ordinary external-group chat messages do not appear in the app callback channel.
+- Confirmed by product/technical review that the official route should now be treated as two separate MVP tracks instead of one unified “group bot” path:
+  1. internal-group or official webhook bot for scheduled SOP sends
+  2. separate message-receive solution for customer-group auto-reply
+- Confirmed that WeCom built-in customer-contact keyword auto-reply is not acceptable for the product goal because it cannot satisfy the full flow of knowledge-base hit, AI fallback, and sensitive-keyword human handoff.
+- Paused implementation at the decision point. The next restart should begin from a concrete architecture choice for customer-group auto-reply, with the current likely split being:
+  1. official webhook/group-bot path for timed SOP pushing
+  2. separate receive/reply path for customer-group Q&A

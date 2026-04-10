@@ -65,6 +65,8 @@ AgentTwin is a standalone module under `modules/AgentTwin` for a unified AI assi
 - student-side companion foundation: complete at first-pass backend level
 - Phase 3 unified linkage dashboard and alerts: complete at MVP level
 - real integrations: partially stubbed, not production-ready
+- real WeCom app-chat integration: verified on production callback URL
+- real external customer-group auto-reply: not solved by the current official self-built app route
 
 ## How To Continue
 
@@ -80,6 +82,8 @@ AgentTwin is a standalone module under `modules/AgentTwin` for a unified AI assi
 10. For local knowledge-state inspection, inspect `data/knowledge-catalog.json` or create entries through the admin forms.
 11. For local routing inspection, inspect `data/routing-config.json` or use the routing config panel in admin.
 12. For deployment prep, inspect `/api/admin/storage` and run `npm run db:bootstrap` against the target database.
+13. For the production WeCom deployment, use the standalone repo `https://github.com/jordanwang922/AgentTwin.git`; Aliyun has already verified callback URL access on `https://wecom.51winwin.com/wecom/callback`.
+14. Treat “WeCom app one-to-one chat” and “external customer-group auto-reply” as two different integration tracks; do not assume one proves the other.
 
 ## Constraints
 
@@ -100,6 +104,8 @@ AgentTwin is a standalone module under `modules/AgentTwin` for a unified AI assi
 - live PostgreSQL environment verification in this repository
 - auth and permissions
 - materialized analytics or BI export path for Phase 3 metrics
+- official self-built WeCom app route does not currently deliver ordinary external customer-group `@bot` messages to the backend
+- customer-contact built-in keyword auto-reply is not an acceptable final product path for this project
 
 ## Latest Verified Commands
 
@@ -117,3 +123,17 @@ AgentTwin is a standalone module under `modules/AgentTwin` for a unified AI assi
 - `npm run test` -> 45 tests passed on 2026-04-09
 - `npm run build` -> all workspaces built successfully on 2026-04-09
 - `npm run log:rotate` -> no rotation needed, active log at 190 lines
+- `npm run test --workspace @agenttwin/api -- wecom.controller.spec.ts` -> 3 tests passed on 2026-04-09 after real callback URL verification behavior was fixed
+- `npm run test --workspace @agenttwin/api` -> 50 tests passed on 2026-04-09 after WeCom verification fixes
+- `npm run test --workspace @agenttwin/api` -> 51 tests passed on 2026-04-10 after `.env` autoload coverage was added
+- `npm run build --workspace @agenttwin/shared && npm run build --workspace @agenttwin/api && npm run build --workspace @agenttwin/worker` -> passed on 2026-04-10
+
+## Latest Integration Summary
+
+- `https://wecom.51winwin.com/health` is reachable from the public internet.
+- WeCom callback URL verification now succeeds against `https://wecom.51winwin.com/wecom/callback`.
+- Official WeCom app chat on mobile is working: inbound message -> callback -> AgentTwin reply.
+- External customer-group toolbar entry injection is working, but ordinary `@AgentTwin老师` messages in the external group do not reach `/wecom/callback`.
+- Current recommended restart point:
+  1. build webhook-based SOP send MVP first
+  2. separately choose a receive/reply architecture for customer-group Q&A
